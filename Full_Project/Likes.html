@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes.com</title>
+    <link rel="stylesheet" href="Style/Likes_Style.css">
+
+      <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="Javascript File/javascript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+    <title>Increment Likes.com</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <div class="logo">
+            <a href="Home.html">
+              <i class="fa-solid fa-code"></i>
+            <span class="sub">P- <span> Par</span></span>
+          </a>
+            </div>
+         <div class="links">
+             <span class="icon">
+                <button onclick="ShowNavigation()"><i class="fa-solid fa-bars" style="color:white" ></i></button>                 
+            </span>
+             <ul id="navigation">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Sign_in.html">Sing in</a></li>
+                 <li><a href="Likes.html">Evaluation</a></li>
+                 <li><a href="About.html">About</a></li>
+             </ul>
+         </div>
+     </div>
+     <div class="Navigation_links">
+      <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Sign_in.html">Sign in</a></li>
+          <li><a href="Likes.html">Evaluation</a></li>
+          <li><a href="About.html">About</a></li>
+      </ul>
+  </div>
+    </div>
+  </div>
+
+    <section class="content">
+  <h1>Website Evaluation</h1>
+  
+<section id="team" class="team">
+
+    <div class="section-title">
+      <h2>Likes</h2>
+      <p>Press like on the favorite Programming Paradigm </p>
+    </div>
+     
+        <div class="member">
+          <img src="images/AOP_P.png" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>AOP</h4>
+              <span>Aspect-Oriented Programming </span>
+            </div>
+            <div class="text">
+             <span id="likeCount">0</span>
+                <button> 
+                <i class="fas fa-heart like-icon" style="color:rgb(27, 190, 235);"></i></button>
+               
+              <button onclick="incrementLikes()">
+                <i class="fas fa-thumbs-up agree-icon" style="color: lavender;"></i>
+            </button>
+            <button onclick="decrementLikes()">
+            <i class="fas fa-thumbs-down disagree-icon" style="color: lavender;"></i>
+          </button>      
+            </div>
+          </div>
+            
+          </div>
+          
+        </div>
+        <div class="member">
+          <img src="images/Concurrent_P.png" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>CPP </h4>
+              <span>Concurrent Programming Paradigm</span>
+            </div>
+            <div class="text">
+              <span id="likeCount2">0</span>                
+              <button> 
+                <i class="fas fa-heart like-icon" style="color: rgb(27, 190, 235);"></i></button>
+              <button onclick="incrementLikes2()">
+                <i class="fas fa-thumbs-up agree-icon" style="color: lavender;"></i>
+            </button>
+            <button onclick="decrementLikes2()">
+            <i class="fas fa-thumbs-down disagree-icon" style="color: lavender;"></i>
+          </button>      
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="images/OOP_P.png" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>OOP</h4>
+              <span>Object-Orientd Programming</span>
+            </div>
+            <div class="text">
+              <span id="likeCount3">0</span>
+                <button> 
+                  <i class="fas fa-heart like-icon" style="color: rgb(27, 190, 235);"></i></button>
+                
+              <button onclick="incrementLikes3()">
+                <i class="fas fa-thumbs-up agree-icon" style="color: lavender;"></i>
+            </button>
+            <button onclick="decrementLikes3()">
+            <i class="fas fa-thumbs-down disagree-icon" style="color: lavender;"></i>
+          </button>      
+            </div>
+        </div>
+      </div>
+
+        <div class="member">
+          <img src="images/Fun_P.png" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>F-PP</h4>
+              <span>functional Programming Paradigm</span>
+            </div>
+            <div class="text">
+              <span id="likeCount4">0</span>
+                <button>
+                  <i class="fas fa-heart like-icon" style="color: rgb(27, 190, 235);"></i></button>
+              
+              <button onclick="incrementLikes4()">
+                <i class="fas fa-thumbs-up agree-icon" style="color:lavender;"></i>
+            </button>
+            <button onclick="decrementLikes4()">
+            <i class="fas fa-thumbs-down disagree-icon" style="color: lavender;"></i>
+          </button>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</section>
+
+<!-- End Team Section -->
+<div class="copy">
+  &copy; <span> All Rights Reserved </span>
+</div>
+
+</body>
+</html>

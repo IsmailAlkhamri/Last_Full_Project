@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing In.com</title>
+    <link rel="stylesheet" href="Style/Form_style.css">
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/84cb6fc315.js"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script type="text/javascript" src="engine1/script.js"></script>
+  <!-- javascript file -->
+  <script src="Javascript File/javascript.js"></script>
+ 
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <div class="logo">
+            <a href="Home.html">
+              <i class="fa-solid fa-code"></i>
+            <span class="sub">P- <span> Par</span></span>
+          </a>
+            </div>
+     <div class="links">
+         <span class="icon">
+        <i class="fa-solid fa-bars" onclick="ShowNavigation()"></i>                 
+        </span>
+         <ul id="navigation" class="navigation">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Form1.html">Sing in</a></li>
+                 <li><a href="Likes.html">Evaluation</a></li>
+                 <li><a href="About.html">About</a></li>
+             </ul>
+         </div>
+     </div>
+
+     <div class="Navigation_links">
+      <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Sign_in.html">Sign in</a></li>
+          <li><a href="Likes.html">Evaluation</a></li>
+          <li><a href="About.html">About</a></li>
+      </ul>
+  </div>
+
+		<section id="intro" class="intro">
+			<h2><strong>Sing In
+            </strong>Insert your personal Information to join into our family</h2>
+			<p>Created By Ismail Al-khamri</p>				
+            <ul class="actions">
+			<li><a href="#Form"><button id="showFormButton" not null>Get started</button></a></li>
+			</ul>
+            </section>
+
+            <section class="form" id="Form">
+
+                <h2>Data Insertion</h2>
+ 
+        <form class="grid_form"  id="UserForm" autocomplete="off" accept-charset="UTF-8">
+            <div class="form_name">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" required  minlength="15" maxlength="30"
+                placeholder="Enter UserName">
+            </div>
+            <div class="form_email">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" required placeholder="Email@gamil.com">
+            </div>
+            <div class="form_password">
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password" required minlength="8" maxlength="12" placeholder="Enter a Complex Password">
+            </div>
+            <div class="form_phone">
+                <label for="phone">Phone</label>
+                <input name="phone" id="phone" type="text" minlength="9" maxlength="9" placeholder="xxx-xxx-xxx">
+            </div>
+            <div class="form_location">
+                <label for="location">Address</label>
+                <input name="location" id="location" type="text" placeholder="define Location">
+            </div>
+            <div>
+            <label for="items">Choose the best Programming Paradigm : </label>
+            <input list="items" id="itemsl" placeholder="Choose a choice">
+            <datalist id="items">
+                <option value="OOP"></option>
+                <option value="Functional Paradigms"></option>
+                <option value="Practical Paradigms"></option>
+                <option value="Imperative Pardigms"></option>
+                <option value="Declarative Pardigms"></option>
+            </datalist>
+           </div>
+            <div class="form_message">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" placeholder="write a Note"></textarea>
+            </div>
+            <ul class="action">
+                <li><i class="fa-solid fa-envelope fa-lg" style="color: white;"></i>
+                <input value="Sing in" type="submit"></li>
+            </ul>
+        </form>
+
+          <h2 style="text-align: center;">User Information</h2>
+          
+          <table id="UserTable" cellspacing="10" cellpadding="20">
+            <tr>
+              <th>UserName</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Selection List</th>
+              <th>Message</th>
+            </tr>
+          </table>
+        </section>
+        <!-- end of form -->
+		<section class="copy">
+			&copy; <span> All Rights Reserved </span>
+		</section>
+          <script>
+
+  // Sign in page JavaScript to control the visibility of the form : 
+  var showFormButton = document.getElementById('showFormButton');
+  var formContainer = document.getElementById('Form');
+
+  showFormButton.addEventListener("click", function() {
+    formContainer.style.display = 'block'; // Show the form
+  });
+  document.getElementById("UserForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    alert('🙏 Thanks for using our website!');
+// Get form input values To Table
+    const username = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("location").value;
+    const selection = document.getElementById("itemsl").value;
+    const message = document.getElementById("message").value;
+
+    // Create new table row
+    const table = document.getElementById("UserTable");
+    const newRow = table.insertRow();
+
+    // Insert cells into the row
+    const cell1 = newRow.insertCell();
+    cell1.textContent = username;
+
+    const cell2 = newRow.insertCell();
+    cell2.textContent = email;
+
+    const cell3 = newRow.insertCell();
+    cell3.textContent = password;
+
+    const cell4 = newRow.insertCell();
+    cell4.textContent = phone;
+
+    const cell5 = newRow.insertCell();
+    cell5.textContent = address;
+
+    const cell6 = newRow.insertCell();
+    cell6.textContent = selection;
+
+    const cell7 = newRow.insertCell();
+    cell7.textContent = message;
+
+    // Reset form values
+    document.getElementById("UserForm").reset();
+  });
+   </script>
+</body>
+</html>
